@@ -8,8 +8,7 @@ void display()
 {
     glClearColor(0.8f, 0.8f, 1.0f, 1.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
-    glLineWidth(5);
-
+    glLineWidth(2);
 
     glBegin(GL_QUADS);
     glColor3ub(15, 15, 57);
@@ -62,8 +61,20 @@ void display()
 
     glEnd();
 
+    glBegin(GL_LINES);
+    glColor3ub(15,15,57);
+    glVertex2f(72.5f,22.0f);
+    glVertex2f(71.5f,8.0f);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glColor3ub(15,15,57);
+    glVertex2f(71.8f,21.8f);
+    glVertex2f(71.8f,25.0f);
+    glEnd();
 
     glFlush(); // Render now
+
 }
 
 /* Main function: GLUT runs as a console application starting at main()  */
